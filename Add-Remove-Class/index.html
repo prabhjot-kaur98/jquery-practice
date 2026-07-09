@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Example</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        .cls {
+            height: 200px;
+            width: 200px;
+            background-color: lightblue;
+            margin-bottom: 20px;
+        }
+
+        .newClass {
+            border: 5px red;
+            background-color: yellow;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cls"></div>
+    <button id="add">Add Class</button>
+    <button id="remove">Remove Class</button>
+    <script>
+        $(document).ready(function(){
+
+            $('#add').click(function(){
+                $('.cls').addClass('newClass');
+            });
+
+            $('#remove').click(function(){
+                $('.cls').removeClass('newClass');
+            });
+        });
+    </script>
+
+</body>
+</html>
