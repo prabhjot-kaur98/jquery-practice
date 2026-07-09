@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Project</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        .cls {
+            height: 300px;
+            width: 300px;
+            background-color: aquamarine;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cls"></div>
+    <button id="h">Hide</button>
+
+    <script>
+        $(document).ready(function(){
+
+            $('#h').click(function(){
+                $('.cls').hide("slow", function(){
+                    alert("Box is hidden");
+                });
+            });
+
+        });
+    </script>
+
+</body>
+</html>
