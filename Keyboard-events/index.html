@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <input type="text" id="txt" placeholder="Type something...">
+    
+    <p>Output: <span id="val"></span></p>
+    <p id="event"></p>
+
+    <h1>Keyboard Events Demo</h1>
+
+<script>
+$(document).ready(function(){
+
+    $('#txt').keydown(function(e){
+        $('#event').text("Key Down: " + e.key);
+    });
+
+    $('#txt').keypress(function(e){
+        $('#event').text("Key Press: " + e.key);
+    });
+
+    $('#txt').keyup(function(e){
+        let value = $(this).val();
+        $('#val').text(value);
+        $('#event').text("Key Up: " + e.key);
+    });
+
+    $('#txt').keyup(function(e){
+        if(e.key === "Enter"){
+            alert("You pressed Enter!");
+        }
+    });
+
+});
+</script>
+
+</body>
+</html>
