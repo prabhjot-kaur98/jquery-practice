@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Effects</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        .cls {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(238, 173, 184);
+            margin-bottom: 20px;
+            display: none; 
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cls"></div>
+
+    <button id="h">Hide</button>
+    <button id="s">Show</button>
+    <button id="t">Toggle</button>  
+    <button id="su">Slide Up</button>  
+    <button id="sd">Slide Down</button>  
+    <button id="fi">Fade In</button>
+    <button id="fo">Fade Out</button> 
+    <button id="ft">Fade Toggle</button>   
+
+    <script>
+        $(document).ready(function(){
+
+            $('#h').click(function(){
+                $('.cls').hide();
+            });
+
+            $('#s').click(function(){
+                $('.cls').show(5000);
+            });
+
+            $('#t').click(function(){
+                $('.cls').toggle(2000);
+            });
+
+            $('#su').click(function(){
+                $('.cls').slideUp("slow");
+            });
+
+            $('#sd').click(function(){
+                $('.cls').slideDown("fast");
+            });
+
+            $('#fi').click(function(){
+                $('.cls').fadeIn();
+            });
+
+            $('#fo').click(function(){
+                $('.cls').fadeOut();
+            });
+
+            $('#ft').click(function(){
+                $('.cls').fadeToggle();
+            });
+
+        });
+    </script>
+
+</body>
+</html>
