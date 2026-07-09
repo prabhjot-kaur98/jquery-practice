@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Example</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <h1>Click Me</h1>
+    <div class="cls" style="width:100px; height:100px; background:lightblue; margin:10px;"></div>
+    <button id="b">Click Button</button>
+
+<script>
+    $(document).ready(function () {
+
+        // Button click
+        $('#b').click(function () {
+            alert("You clicked the button");
+        });
+
+        // h1 click
+        $('h1').click(function () {
+            alert("You clicked on heading");
+        });
+
+        // div click
+        $('.cls').click(function () {
+            alert("You clicked the box");
+        });
+
+    });
+</script>
+
+</body>
+</html>
